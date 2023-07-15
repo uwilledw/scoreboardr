@@ -8,6 +8,10 @@ class ObservableAppState {
   /** @type {import('./models/Account.js').Account} */
   account = null
 
+  score1 = 0
+
+  score2 = 0
+
   constructor() {
     makeAutoObservable(this)
   }
