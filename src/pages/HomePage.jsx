@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AppState } from "../AppState.js";
 
 export default function HomePage() {
-  // const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0)
   let score1 = AppState.score1
   let score2 = AppState.score2
   function addOne() {
@@ -21,10 +21,10 @@ export default function HomePage() {
                   <h1>{score1}</h1>
                 </div>
                 <div>
-                  <h1>{score2}</h1>
+                  <h1>{count}</h1>
                 </div>
               </div>
-              <button onClick={addOne} className="btn btn-success">{score1}</button>
+              <button onClick={() => setCount((count) => count + 1)} className="btn btn-success">{score1}</button>
               <button className="btn btn-success">-</button>
             </section>
           </div>
